@@ -21,6 +21,7 @@ BuildRequires: cmake(Qt5XmlPatterns)
 BuildRequires: cmake(Qt5Test)
 BuildRequires: cmake(KF5CoreAddons)
 BuildRequires: cmake(KF5Codecs)
+BuildRequires: cmake(KF5Mime)
 
 %description
 KDE library for handling the IMAP protocol
