@@ -1,6 +1,6 @@
 %define major 0
-%define libname %mklibname KPimKImap2 %{major}
-%define devname %mklibname KPimKImap2 -d
+%define libname %mklibname KIMAP2 %{major}
+%define devname %mklibname KIMAP2 -d
 # Doesn't follow usual versioning schemes yet -- always unstable for now
 %define stable unstable
 
