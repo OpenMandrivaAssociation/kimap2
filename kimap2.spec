@@ -56,7 +56,7 @@ Development files (Headers etc.) for %{name}.
 %else
 %autosetup -p1
 %endif
-%apply_patches
+%autopatch -p1
 %cmake_kde5
 
 %build
