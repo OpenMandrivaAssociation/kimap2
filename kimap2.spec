@@ -3,14 +3,14 @@
 %define devname %mklibname KIMAP2 -d
 # Doesn't follow usual versioning schemes yet -- always unstable for now
 %define stable unstable
-%define snapshot 20190917
+%define snapshot 20200905
 
 Name:		kimap2
 Version:	0.3.1
 %if %{snapshot}
 Release:	0.%{snapshot}.1
-# git://anongit.kde.org/kimap2.git
-Source0:	%{name}-%{version}-%{snapshot}.tar.xz
+# https://invent.kde.org/pim/kimap2
+Source0:	https://invent.kde.org/pim/kimap2/-/archive/master/kimap2-master.tar.bz2
 %else
 Release:	1
 Source0:	http://download.kde.org/%{stable}/kimap2/%{version}/src/%{name}-%{version}.tar.xz
@@ -52,7 +52,7 @@ Development files (Headers etc.) for %{name}.
 
 %prep
 %if %{snapshot}
-%autosetup -p1 -n %{name}-%{version}-%{snapshot}
+%autosetup -p1 -n %{name}-master
 %else
 %autosetup -p1
 %endif
