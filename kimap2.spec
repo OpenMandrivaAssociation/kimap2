@@ -46,11 +46,7 @@ Requires: %{libname} = %{EVRD}
 Development files (Headers etc.) for %{name}.
 
 %prep
-#if %{snapshot}
-#autosetup -p1 -n %{name}-master
-#else
 %autosetup -p1 -n %{name}-v%{version}
-#endif
 %autopatch -p1
 %cmake_kde5
 
