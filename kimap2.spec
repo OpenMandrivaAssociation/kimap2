@@ -7,7 +7,7 @@
 
 Name:		kimap2
 Version:	0.4.0
-Release:	1
+Release:	2
 #Source0:	http://download.kde.org/%{stable}/kimap2/%{version}/src/%{name}-%{version}.tar.xz
 Source0:  https://invent.kde.org/pim/kimap2/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
 Summary:	KDE library for handling the IMAP protocol
