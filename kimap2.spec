@@ -3,13 +3,17 @@
 %define devname %mklibname KIMAP2 -d
 # Doesn't follow usual versioning schemes yet -- always unstable for now
 %define stable unstable
-%define snapshot %{nil}
+%define snapshot 20230809
 
 Name:		kimap2
-Version:	0.4.0
-Release:	2
+Version:	0.4.1
+Release:	%{?snapshot:0.%{snapshot}.}1
 #Source0:	http://download.kde.org/%{stable}/kimap2/%{version}/src/%{name}-%{version}.tar.xz
-Source0:  https://invent.kde.org/pim/kimap2/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
+%if 0%{?snapshot:1}
+Source0:	https://invent.kde.org/pim/kimap2/-/archive/master/kimap2-master.tar.bz2
+%else
+Source0:	https://invent.kde.org/pim/kimap2/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
+%endif
 Summary:	KDE library for handling the IMAP protocol
 URL: http://kde.org/
 License: GPL
@@ -46,7 +50,7 @@ Requires: %{libname} = %{EVRD}
 Development files (Headers etc.) for %{name}.
 
 %prep
-%autosetup -p1 -n %{name}-v%{version}
+%autosetup -p1 -n %{name}-%{?snapshot:master}%{?!snapshot:v%{version}}
 %autopatch -p1
 %cmake_kde5
 
