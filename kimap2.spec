@@ -15,7 +15,7 @@ Source0:	https://invent.kde.org/pim/kimap2/-/archive/master/kimap2-master.tar.bz
 Source0:	https://invent.kde.org/pim/kimap2/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
 %endif
 Summary:	KDE library for handling the IMAP protocol
-URL: http://kde.org/
+URL: https://kde.org/
 License: GPL
 Group: System/Libraries
 BuildRequires: cmake(ECM)
